@@ -1,0 +1,1663 @@
+{
+	"info": {
+		"_postman_id": "c6858a00-8bb8-4da1-a92b-ea0fe62554df",
+		"name": "Gamification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Opening",
+			"item": [
+				{
+					"name": "Tim C Mini Project",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "POST Registrasi Anak",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Kevin\",\r\n    \"lastname\": \"Hadinata\",\r\n    \"username\": \"kevinhadinatatan\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"kevin@yahoo.com\",\r\n    \"roleid\": \"2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/registrasi",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"registrasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Registrasi Orang Tua",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Susan\",\r\n    \"lastname\": \"stacy\",\r\n    \"username\": \"susantan\",\r\n    \"password\": \"12345678\",\r\n    \"email\": \"susan@yahoo.com\",\r\n    \"roleid\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/registrasi",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"registrasi"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Login Anak",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"kevinhadinatatan\",\r\n    \"password\": \"12345678\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Login Orang Tua",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"susantan\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/login",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "{{eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Ilo5MXMyUDhUbzdZY0drM2FNQVVDaiIsImZpcnN0bmFtZSI6IlN1c2FuIiwibGFzdG5hbWUiOiJzdGFjeSIsInVzZXJuYW1lIjoic3VzYW50YW4iLCJwYXNzd29yZCI6IlUyRnNkR1ZrWDE4NlpabndlN3I3aXRJdDloR3IwYXBQY0tPelhsZlMxY0k9IiwiZW1haWwiOiJzdXNhbkB5YWhvby5jb20iLCJpYXQiOjE2MjgyMjEwNzgsImV4cCI6MTYyODIyNDY3OH0.bwSjlFPQYV3xqsbzEuoQjG8lhnLv3wC3UW_ih5az4cM}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/profile",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstname\": \"Susan\",\r\n    \"lastname\": \"Stacy\",\r\n    \"email\": \"stacy@gmail.com\",\r\n    \"password\": \"1234567\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/profile/kc0r8cwBQ9Ik2NXxZxEOy",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"profile",
+								"kc0r8cwBQ9Ik2NXxZxEOy"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Forgot Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "password",
+									"value": "%7B%7Btoken%7D%7D",
+									"type": "string"
+								},
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"password\": \"123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/profile/kc0r8cwBQ9Ik2NXxZxEOy",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"profile",
+								"kc0r8cwBQ9Ik2NXxZxEOy"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Workspace",
+			"item": [
+				{
+					"name": "POST Workspace Anak",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Ik1VRUhydTNMRlZwVTdWbk9mNFE4bCIsImZ1bGxuYW1lIjoiS2V2aW4gSGFkaW5hdGEiLCJ1c2VybmFtZSI6ImtldmluaGFkaW5hdGF0YW4iLCJwYXNzd29yZCI6IlUyRnNkR1ZrWDE4bng4OTRsTGVzV0FySFp6K3VFZTVpUkxGdkNnelVuTFU9IiwiZW1haWwiOiJrZXZpbmhhZGluYXRhQHlhaG9vLmNvbSIsInJvbGUiOiJTaXN3YSIsImlhdCI6MTYyODA4NjExNywiZXhwIjoxNjI4MDg3MDE3fQ.5FKOp-FQDJ186RJM33mb1LF1H3puNV-FFOOSFY-GRfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Keluarga Sandra\",\r\n    \"detail\": \"\",\r\n    \"userid\": \"LjpbENKCVCLfH5rrFPxhJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workspace",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workspace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Workspace Orang Tua",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Keluarga Anggur\",\r\n    \"detail\": \"Ini keluarga dari buah anggur\",\r\n    \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workspace",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workspace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET all workspaces",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/workspace",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workspace"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT workspace",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Im9jbmFuT1VrRnB4OE9MWUtmbjZQbCIsImZ1bGxuYW1lIjoiU3VzYW4gU3RhY3kiLCJ1c2VybmFtZSI6InN1c2FudGFuIiwicGFzc3dvcmQiOiJVMkZzZEdWa1gxLzZkOG1yOWRsWXR4L3VzcHo2cUljMmxaUHMxaVNpa0IwPSIsImVtYWlsIjoic3VzYW5AeWFob28uY29tIiwicm9sZSI6Ik9yYW5nIFR1YSIsImlhdCI6MTYyODA4MTU2MiwiZXhwIjoxNjI4MDgzMzYyfQ.sY2XAQqp_zcQYBF8Sq-dMyAeHyAkUVe2Ymws8Mxlc8E",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Keluarga Stacy\",\r\n    \"detail\": \"keluarga ini harus nomor 1\",\r\n    \"userid\": \"Ip9B9f3FfWgXAk3Yj3Hv7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workspace/HIl5Oje2SqDzcYzTOMbqK",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workspace",
+								"HIl5Oje2SqDzcYzTOMbqK"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE workspace",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Im9jbmFuT1VrRnB4OE9MWUtmbjZQbCIsImZ1bGxuYW1lIjoiU3VzYW4gU3RhY3kiLCJ1c2VybmFtZSI6InN1c2FudGFuIiwicGFzc3dvcmQiOiJVMkZzZEdWa1gxLzZkOG1yOWRsWXR4L3VzcHo2cUljMmxaUHMxaVNpa0IwPSIsImVtYWlsIjoic3VzYW5AeWFob28uY29tIiwicm9sZSI6Ik9yYW5nIFR1YSIsImlhdCI6MTYyODA4MjM3NywiZXhwIjoxNjI4MDg1OTc3fQ.PduaxmBzAcU-1W1fKJBclhgXpw-j_tyBmzsEHRWs0jA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"Ip9B9f3FfWgXAk3Yj3Hv7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/workspace/W3ufr-EVF6-oyUydD6jw1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workspace",
+								"W3ufr-EVF6-oyUydD6jw1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET workspace By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6InVKdm02eHhPcXJkYTcxWkZLZlNjLSIsImZ1bGxuYW1lIjoiU3VzYW4gU3RhY3kiLCJ1c2VybmFtZSI6ImtzdXNhbnRhbiIsInBhc3N3b3JkIjoiVTJGc2RHVmtYMThIdWk3Z1hmaUcwSXNOM2I5V0Qya1ZqMWRvM2VYSjRpUT0iLCJlbWFpbCI6InN1c2FuQHlhaG9vLmNvbSIsImlhdCI6MTYyODE0NzcxNSwiZXhwIjoxNjI4MTUxMzE1fQ.0_aXjAuKOkX9iILe9G1N2Q3L4PY4gV3x7OWH6CdKBdc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/workspace/GmFXlxN5v9ZZAbOrbL56k",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"workspace",
+								"GmFXlxN5v9ZZAbOrbL56k"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Section",
+			"item": [
+				{
+					"name": "POST Section Anak",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Ik1VRUhydTNMRlZwVTdWbk9mNFE4bCIsImZ1bGxuYW1lIjoiS2V2aW4gSGFkaW5hdGEiLCJ1c2VybmFtZSI6ImtldmluaGFkaW5hdGF0YW4iLCJwYXNzd29yZCI6IlUyRnNkR1ZrWDE4bng4OTRsTGVzV0FySFp6K3VFZTVpUkxGdkNnelVuTFU9IiwiZW1haWwiOiJrZXZpbmhhZGluYXRhQHlhaG9vLmNvbSIsInJvbGUiOiJTaXN3YSIsImlhdCI6MTYyODA4NjExNywiZXhwIjoxNjI4MDg3MDE3fQ.5FKOp-FQDJ186RJM33mb1LF1H3puNV-FFOOSFY-GRfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"LjpbENKCVCLfH5rrFPxhJ\",\r\n    \"name\": \"ToDo\",\r\n    \"id\": \"AZ6mUsBT7SJIoECYpOpDO\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/section",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"section"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Section Orang Tua",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\",\r\n        \"name\": \"ToDo\",\r\n        \"workspaceID\": \"g0fAHst2g-4qevRCFTyxd\"\r\n    },\r\n    {\r\n        \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\",\r\n        \"name\": \"Doing\",\r\n        \"workspaceID\": \"g0fAHst2g-4qevRCFTyxd\"\r\n    },\r\n    {\r\n        \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\",\r\n        \"name\": \"Done\",\r\n        \"workspaceID\": \"g0fAHst2g-4qevRCFTyxd\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/section",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"section"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET all section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/section",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"section"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Im9jbmFuT1VrRnB4OE9MWUtmbjZQbCIsImZ1bGxuYW1lIjoiU3VzYW4gU3RhY3kiLCJ1c2VybmFtZSI6InN1c2FudGFuIiwicGFzc3dvcmQiOiJVMkZzZEdWa1gxLzZkOG1yOWRsWXR4L3VzcHo2cUljMmxaUHMxaVNpa0IwPSIsImVtYWlsIjoic3VzYW5AeWFob28uY29tIiwicm9sZSI6Ik9yYW5nIFR1YSIsImlhdCI6MTYyODA4MTgwNSwiZXhwIjoxNjI4MDg1NDA1fQ.jd3FgeCC5rlUgPPUz18z-ayLk5qlBCiHa52bpppcH_k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"Ip9B9f3FfWgXAk3Yj3Hv7\",\r\n    \"name\": \"ToDo\",\r\n    \"id\": \"HIl5Oje2SqDzcYzTOMbqK\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/section/C2kaQY5rPuNaWjDckJdvt",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"section",
+								"C2kaQY5rPuNaWjDckJdvt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE section",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Im9jbmFuT1VrRnB4OE9MWUtmbjZQbCIsImZ1bGxuYW1lIjoiU3VzYW4gU3RhY3kiLCJ1c2VybmFtZSI6InN1c2FudGFuIiwicGFzc3dvcmQiOiJVMkZzZEdWa1gxLzZkOG1yOWRsWXR4L3VzcHo2cUljMmxaUHMxaVNpa0IwPSIsImVtYWlsIjoic3VzYW5AeWFob28uY29tIiwicm9sZSI6Ik9yYW5nIFR1YSIsImlhdCI6MTYyODA4MTgwNSwiZXhwIjoxNjI4MDg1NDA1fQ.jd3FgeCC5rlUgPPUz18z-ayLk5qlBCiHa52bpppcH_k",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"Ip9B9f3FfWgXAk3Yj3Hv7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/section/C2kaQY5rPuNaWjDckJdvt",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"section",
+								"C2kaQY5rPuNaWjDckJdvt"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET section By ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/section/C2kaQY5rPuNaWjDckJdvt",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"section",
+								"C2kaQY5rPuNaWjDckJdvt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Task",
+			"item": [
+				{
+					"name": "POST Task Anak",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Ik1VRUhydTNMRlZwVTdWbk9mNFE4bCIsImZ1bGxuYW1lIjoiS2V2aW4gSGFkaW5hdGEiLCJ1c2VybmFtZSI6ImtldmluaGFkaW5hdGF0YW4iLCJwYXNzd29yZCI6IlUyRnNkR1ZrWDE4bng4OTRsTGVzV0FySFp6K3VFZTVpUkxGdkNnelVuTFU9IiwiZW1haWwiOiJrZXZpbmhhZGluYXRhQHlhaG9vLmNvbSIsInJvbGUiOiJTaXN3YSIsImlhdCI6MTYyODA4NjExNywiZXhwIjoxNjI4MDg3MDE3fQ.5FKOp-FQDJ186RJM33mb1LF1H3puNV-FFOOSFY-GRfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Mengerjakan tugas Bahasa Indonesia\",\r\n    \"detail\": \"\",\r\n    \"waktuMulai\": \"2021-07-19 10:00:00\",\r\n    \"waktuSelesai\": \"2021-07-19 12:00:00\",\r\n    \"priorityid\": \"R_s7RPPkXRTG-aoRdZmmG\",\r\n    \"sectionid\": \"C2kaQY5rPuNaWjDckJdvt\",\r\n    \"userid\": \"LjpbENKCVCLfH5rrFPxhJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Task Orang Tua",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\r\n    {\r\n        \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\",\r\n        \"name\": \"Mengerjakan tugas bahasa inggris\",\r\n        \"detail\": \"\",\r\n        \"point\": \"10\",\r\n        \"waktuMulai\": \"2021-07-23 10:00:00\",\r\n        \"waktuSelesai\": \"2021-07-23 12:00:00\",\r\n        \"priorityID\": \"1\",\r\n        \"sectionID\": \"sjyzvJNTQIe4LmqdwTm12\"\r\n    },\r\n    {\r\n        \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\",\r\n        \"name\": \"Mengerjakan tugas indonesia\",\r\n        \"detail\": \"\",\r\n        \"point\": \"15\",\r\n        \"waktuMulai\": \"2021-07-21 10:00:00\",\r\n        \"waktuSelesai\": \"2021-07-21 12:00:00\",\r\n        \"priorityID\": \"1\",\r\n        \"sectionID\": \"sjyzvJNTQIe4LmqdwTm12\"\r\n    }\r\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Task",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{base_url}}/task",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Im9jbmFuT1VrRnB4OE9MWUtmbjZQbCIsImZ1bGxuYW1lIjoiU3VzYW4gU3RhY3kiLCJ1c2VybmFtZSI6InN1c2FudGFuIiwicGFzc3dvcmQiOiJVMkZzZEdWa1gxLzZkOG1yOWRsWXR4L3VzcHo2cUljMmxaUHMxaVNpa0IwPSIsImVtYWlsIjoic3VzYW5AeWFob28uY29tIiwicm9sZSI6Ik9yYW5nIFR1YSIsImlhdCI6MTYyODA4ODIwMiwiZXhwIjoxNjI4MDkxODAyfQ.9yjAwQMk2gjrCuHEVOv-IFHcCDMuJQHNgfxO-FYOahE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"Ip9B9f3FfWgXAk3Yj3Hv7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJRCI6Ik1VRUhydTNMRlZwVTdWbk9mNFE4bCIsImZ1bGxuYW1lIjoiS2V2aW4gSGFkaW5hdGEiLCJ1c2VybmFtZSI6ImtldmluaGFkaW5hdGF0YW4iLCJwYXNzd29yZCI6IlUyRnNkR1ZrWDE4bng4OTRsTGVzV0FySFp6K3VFZTVpUkxGdkNnelVuTFU9IiwiZW1haWwiOiJrZXZpbmhhZGluYXRhQHlhaG9vLmNvbSIsInJvbGUiOiJTaXN3YSIsImlhdCI6MTYyODA4NjExNywiZXhwIjoxNjI4MDg3MDE3fQ.5FKOp-FQDJ186RJM33mb1LF1H3puNV-FFOOSFY-GRfA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userid\": \"Ip9B9f3FfWgXAk3Yj3Hv7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task/eYus8C46DZEINNFtE2Exg",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"eYus8C46DZEINNFtE2Exg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Task By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/task/fpBSNa43shKAkouXYzlyc",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"fpBSNa43shKAkouXYzlyc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Search Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/task/search?q=matematika",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "matematika"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Filter Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/task/priority?p=Medium",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"priority"
+							],
+							"query": [
+								{
+									"key": "p",
+									"value": "Medium"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Anak Task Taken By Parent ID",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task/all/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"all",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Anak Take Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\",\r\n    \"taskID\": \"458TMXGpuYrfO0HmHvP_T\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task/user/take",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"user",
+								"take"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Anak Completed Task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/task/completed/458TMXGpuYrfO0HmHvP_T",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"task",
+								"completed",
+								"458TMXGpuYrfO0HmHvP_T"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reward",
+			"item": [
+				{
+					"name": "POST Reward Anak",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Sepatu\",\r\n    \"point\": \"20\",\r\n    \"imgURL\": \"\",\r\n    \"quantity\": \"\",\r\n    \"tierID\": \"\",\r\n    \"userid\": \"LjpbENKCVCLfH5rrFPxhJ\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reward",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reward"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Reward Orang Tua",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"voucher Google Play 50k\",\r\n    \"point\": \"50\",\r\n    \"imgURL\": \"/static/img/image12.png\",\r\n    \"quantity\": \"20\",\r\n    \"tierID\": \"2\",\r\n    \"userid\": \"kc0r8cwBQ9Ik2NXxZxEOy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/reward",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"reward"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET All Reward",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/reward",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"reward"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Reward",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"voucher Google Play 50k\",\r\n    \"point\": \"50\",\r\n    \"imgURL\": \"/static/img/image12.png\",\r\n    \"quantity\": \"20\",\r\n    \"tierID\": \"2\",\r\n    \"isShowReward\": false,\r\n    \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/reward/7aSxaUGYEMLBHr95j9tgr",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"reward",
+								"7aSxaUGYEMLBHr95j9tgr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Reward",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/reward/7aSxaUGYEMLBHr95j9tgr",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"reward",
+								"7aSxaUGYEMLBHr95j9tgr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Anak Take Reward",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\",\r\n    \"rewardID\": \"7aSxaUGYEMLBHr95j9tgr\",\r\n    \"totalTakeReward\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/reward/user/take",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"reward",
+								"user",
+								"take"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Reward By ID",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/user/reward/7aSxaUGYEMLBHr95j9tgr",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"reward",
+								"7aSxaUGYEMLBHr95j9tgr"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Reward Take Anak",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/get/reward",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"get",
+								"reward"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "History",
+			"item": [
+				{
+					"name": "History Orang Tua",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/history",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"history"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "History Anak",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/history",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"history"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Review",
+			"item": [
+				{
+					"name": "Review Orang Tua",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"kc0r8cwBQ9Ik2NXxZxEOy\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/review",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"review"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Review Anak",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/review",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"review"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Tier",
+			"item": [
+				{
+					"name": "GET All Tier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tier",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tier"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Filter Tier",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/tier/filter?b=Bronze",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"tier",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "b",
+									"value": "Bronze"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Score",
+			"item": [
+				{
+					"name": "GET User Score",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userID\": \"sYY-OyNNZY95XfVCVcwDx\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{base_url}}/user/score",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"user",
+								"score"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
