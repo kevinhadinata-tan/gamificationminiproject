@@ -12,6 +12,7 @@ const { validateToken } = require('../middlewares/auth');
 const tierController = require('../controllers/tierController');
 const historyController = require('../controllers/historyController');
 const reviewController = require('../controllers/reviewController');
+// contoh testing deploy
 
 function routes () {
 
