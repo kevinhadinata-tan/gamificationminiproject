@@ -1,10 +1,19 @@
 const { Sequelize } = require('sequelize');
 
 const Database = new Sequelize({
-    dialect: 'postgres',
-    database: 'gamification-mini-project',
-    username: 'postgres',
-    password: 'nebc7001'
+    use_env_variable: "DATABASE_URL",
+    database: "d1bgpj2sea6qss",
+    host: "ec2-3-217-68-126.compute-1.amazonaws.com",
+    username: "dvawfyzuplqfok",
+    password: "b9a2915c8da1403a5f97c47e758b7078a7c7eae952ecc4f476e3dba5d504d57e",
+    logging: false,
+    dialect: "postgres",
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false
+      }
+    }
 });
 
 // check database connections
