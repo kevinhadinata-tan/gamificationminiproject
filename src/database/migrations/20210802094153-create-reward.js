@@ -40,7 +40,7 @@ module.exports = {
         }
       },
       isShowReward: {
-          type: DataTypes.BOOLEAN,
+          type: Sequelize.BOOLEAN,
           allowNull: false,
       },
       createdAt: {
