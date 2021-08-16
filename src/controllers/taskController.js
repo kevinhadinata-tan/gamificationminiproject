@@ -171,6 +171,7 @@ class TaskController {
 
     async getAllTaskAnak(req, res) {
         try {
+            const user = req.body;
             const taskModel = TaskModel();
             const taskAssignedModel = TaskAssignedModel();
             const userModel = UserModel();
@@ -196,6 +197,9 @@ class TaskController {
                         as: 'User',
                     }
                 ],
+                where: {
+                    'userID': user.userID
+                }
             });
 
             res.status(200).send({
